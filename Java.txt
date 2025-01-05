@@ -1,0 +1,1022 @@
+1.Realizar un programa que imprima en pantalla su nombre y su correo electrónico.
+
+public class ej1{
+
+  public static void main(String args[]){
+
+    System.out.println("Isaias Ruiz Tineo");
+
+      System.out.println("elmejorduro14@gmail.com");  
+
+  }
+
+}
+
+2. Realizar un programa que imprima los números del 1 al 10.
+
+public class ej2{
+
+  public static void main(String args[]){
+
+   for( int i=1; i<=10; i++){
+
+     System.out.println(i);
+
+     }
+
+  }
+
+}
+
+3. Realizar un programa que imprima los números del -10 al 0.
+
+public class ej3{
+
+  public static void main(String args[]){
+
+   for( int i=-10; i<=0; i++){
+
+     System.out.println(i);
+
+     }
+
+  }
+
+}
+
+4. Realizar un programa que imprima la sumatoria de los números del 1 al 20.
+
+public class ej4{
+
+  public static void main(String args[]){
+
+    int sumar = 0;
+
+   for( int i= 1; i<=20; i++){
+
+    sumar = sumar + i;
+
+     System.out.println(""+sumar);
+
+     }
+
+  }
+
+}
+
+5. Realizar un programa que imprima la tabla de multiplicar del 2 al 10.
+
+public class ej5{
+
+  public static void main(String args[]){
+
+    int sumar = 0;
+
+   for( int i= 2; i<=10; i++){
+
+      for(int j=1; j<= 10; j++)
+
+     System.out.println("\t"+i+"*"+j+ "="+i*j);
+
+     }
+
+  }
+
+}
+
+6. Realizar un programa que imprima la serie Fibonacci (investigar) de un valor dado (valor fijo)
+
+public class ej6{
+
+  public static void main(String args[]){
+
+    int i = 0;
+
+    int j = 1;
+
+    int aux;
+
+    int fijo = 100;
+
+   
+
+   System.out.println(i);
+
+    System.out.println(j);
+
+    
+
+    while(j+i <= fijo){
+
+     aux=i;
+
+     i=j;
+
+     j=aux+i;
+
+   System.out.println(j);
+
+}
+
+     
+
+  }
+
+}
+
+7. Realizar un programa que imprima los números pares del 2 al 100.
+
+public class ej7{
+
+  public static void main(String args[]){
+
+ for(int i=1; i< 100; i++){
+
+i=i+1;
+
+
+
+System.out.println(i);
+
+}
+
+
+
+}
+
+}
+
+8. Realizar un programa que imprima los números impares del 1 al 100.
+
+public class ej8{
+
+  public static void main(String args[]){
+
+ for(int i=2; i< 100; i++){
+
+i=i+1;
+
+
+
+System.out.println(i);
+
+}
+
+
+
+}
+
+}
+
+9. Realizar un programa que imprima la sumatoria de los números impares del 1 al 1000.
+
+public class ej9{
+
+  public static void main(String args[]){
+
+  int sumar=0;
+
+ for(int i=2; i<= 1000; i++){
+
+i=i+1;
+
+sumar=sumar+i;
+
+System.out.println(""+sumar);
+
+}
+
+
+
+}
+
+}
+
+10. Realizar un programa que imprima el área del triangulo de base 26 y altura 38. (investigar fórmula)
+
+public class ej10{
+
+  public static void main(String args[]){
+
+  int base=26;
+
+  int altura=38;
+
+  int area;
+
+  area=base*altura/2;
+
+  System.out.println("el area del triangulo es= " +area);
+
+
+
+}
+
+}
+
+___________________________________________________________________________________________________________________________________________
+
+1. Crear la clase Persona con los atributos: nombre, apellido, edad y sexo y los métodos, dormir, comer, caminar y correr. En cada método imprimir un mensaje con la acción que se esta realizando.
+
+public class Persona {
+
+String Nombre;
+String Apellido;
+int Edad;
+String Sexo;
+
+   public Persona() {
+
+Nombre = "Carlos";
+Apellido = "Xavier";
+Edad = 28;
+Sexo = "Masculino";
+
+}
+
+      public void dormir() {
+
+System.out.println("Durmiendo");
+
+
+}   
+
+   public void comer() {
+
+System.out.println("Comiendo");
+
+
+}   
+
+   public void caminar() {
+
+System.out.println("Caminando");
+
+
+}   
+
+   public void correr() {
+
+System.out.println("Corriendo");
+
+
+}   
+
+}
+
+public class ClasePersona {
+   public static void main(String args[]){
+
+Persona x = new Persona();
+
+x.Nombre = "Carlos";
+x.Apellido = "Xavier";
+x.Edad = 28;
+x.Sexo = "Masculino";
+
+x.dormir();
+x.comer();
+x.caminar();
+x.correr();
+
+System.out.println(x.Nombre);
+
+
+}
+}
+
+
+2. Crear una clase Calculadora con los métodos sumar, restar, multipricar y dividir que reciba dos parámetros enteros y retorne el resultado (utilizar la palabra reservada return).
+public class Calculadora {
+        
+    public int sumar(int a, int b){
+          
+            int sum = a + b;
+            return sum;
+        }
+         
+      public int restar(int a, int b){
+            
+            int res = a - b; 
+            return res ;
+        }
+       
+  
+      public int multiplicar( int a, int b){
+             
+            int mult = a * b;
+            return  mult;
+        }
+            
+       public int dividir(int a, int b){
+            
+             int div=a / b;
+             return div;
+        }
+        
+    
+}
+
+import java.util.Scanner; 
+
+public class TestCalculadora {
+
+    public static void main(String[] args) {
+        
+         Scanner ent = new Scanner(System.in);
+         Calculadora c = new Calculadora();
+         
+         int a;
+         int b;
+     
+         
+         System.out.println("Ingrese el primer numero");
+         a = ent.nextInt();
+         System.out.println("Ingrese el segundo numero");
+         b = ent.nextInt();
+  
+         
+         
+         
+         
+         int resul = c.sumar (a,b);
+         int resul2 = c.restar (a,b);
+         int resul3 = c.multiplicar (a,b);
+         int resul4 = c.dividir (a,b);
+         
+       
+         
+         
+          System.out.println("El resultado de la suma es:" + resul);
+           System.out.println("El resultado de la resta es:"+resul2);
+            System.out.println("El resultado de la multiplicacion es:"+resul3);
+             System.out.println("El resultado de la division es:"+resul4);
+           
+               
+           
+         
+         
+    }
+    
+}
+   
+
+3. Sobrecargar los métodos sumar, restar y multiplicar de la clase del ejercicio 2 para que reciba tres y cuatro parámetros enteros.
+
+public class Calculadora {
+    
+    public int sumar(int a, int b){
+          
+            int sum = a + b;
+            return sum;
+        }
+
+       public int sumar(int a, int b, int d){
+          
+            int sum = a + b + d;
+            return sum;
+        }    
+
+       public int sumar(int a, int b, int d, int e){
+           
+            int sum = a + b + d + e;
+            return  sum;
+       }
+         
+      public int restar(int a, int b){
+        
+        int res = a - b;    
+        return  res;
+        }
+       public int restar(int a, int b, int d){
+          
+            int res = a - b - d;
+            return res;
+        }
+     
+       
+      public int restar(int a, int b, int d, int e){
+          
+          int res = a - b - d -e;  
+          return  res;
+       }
+       
+  
+      public int multiplicar( int a, int b){
+        
+        int mult = a * b; 
+        return  mult;
+        }
+
+       public int multiplicar(int a, int b, int d){
+          
+            int mult = a * b * d;
+            return mult;
+        }
+      
+      public int multiplicar(int a, int b, int d, int e){
+            
+         int mult = a * b * d * e;
+         return  mult;
+       }
+      
+            
+       public int dividir(int a, int b){
+           
+            int div = a / b; 
+            return div;
+        }
+
+        public int dividir(int a, int b, int d){
+          
+            int div = a / b / d;
+            return div;
+        }
+       
+         public int dividir(int a, int b, int d, int e){
+          
+             int div = a / b / d / e;
+            return  div;
+       }
+    
+}
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        
+       
+         Calculadora ca1 = new Calculadora();
+         
+         int res = ca1.sumar(100,300);
+          int re1= ca1.sumar(150,250,350);
+          int re2= ca1.sumar(200,400,600);
+
+          int res2 = ca1.restar(10,25);
+          int re3 = ca1.restar(5,10,20);
+          int re4 = ca1.restar(3,6,9,12);
+           
+          int res3 = ca1.multiplicar(4,16);
+          int re5 = ca1.multiplicar(8,16,32);
+          int re6 = ca1.multiplicar(15,20,25,30);
+
+          int res4 = ca1.dividir(5652,423);
+          int re7 = ca1.dividir(24,56,60);
+          int re8 = ca1.dividir(6,14,22,120); 
+
+          System.out.println("El resultado de la suma es: "+res);
+            System.out.println("El resultado de la suma con tres digitos es: "+re1);
+               System.out.println("El resultado de la suma con cuatro digitos es: "+re2);
+
+            System.out.println("El resultado de la resta es: "+res2);
+               System.out.println("El resultado de la resta con tres digitos es: "+re3);
+                  System.out.println("El resultado de la resta con cuatro digitos es: "+re4);
+
+        
+              System.out.println("El resultado de la multiplicacion es: "+res3);
+                   System.out.println("El resultado de la suma con tres digitos es: "+re5);
+                      System.out.println("El resultado de la suma con tres digitos es: "+re6);
+
+                System.out.println("El resultado de la division es: "+res4);
+                  System.out.println("El resultado de la division con tres digitos es: "+re7);
+                     System.out.println("El resultado de la division con cuatro digitos es: "+re8);
+
+    }
+    
+}
+
+
+4. Crear la clase ManejaCadenas que contenga:
+import  java.util.StringTokenizer;
+
+public class ManejaCadenas {
+	
+	public String reverso (String cadena){
+		String cadenainvertida = "";
+		for (int x = cadena.length()-1; x >=0; x--){
+			cadenainvertida  += cadena.charAt(x);
+		}
+		return cadenainvertida;
+	
+	}
+
+	public String eliminaVocales (String palabra){
+		String vocales = "" ;
+		for ( int y = 0; y < palabra.length(); y++) {
+			if (palabra.charAt(y) != 'a' && palabra.charAt(y) != 'e' && palabra.charAt(y) != 'i' && palabra.charAt(y) != 'o' && palabra.charAt(y) != 'u') { 
+			vocales += palabra.charAt(y);
+			}	
+		}
+		return vocales;	
+	
+	}
+
+	public int cuentaVocales (String palabras){
+		int contador1 = 0;
+		for(int z = 0; z < palabras.length(); z++){
+			if ((palabras.charAt(z)== 'a') || (palabras.charAt(z)== 'e') || (palabras.charAt(z)== 'i') || (palabras.charAt(z)== 'o') || (palabras.charAt(z)== 'u')){
+				contador1++;
+			}
+		}
+		return contador1;
+		
+	}
+
+	public int cuentaConsonantes (String palabrass){
+		int contador2 = 0;
+		for (int w = 0; w < palabrass.length();w++){
+			if ((palabrass.charAt(w) != 'a') && (palabrass.charAt(w)!= 'e') && (palabrass.charAt(w)!= 'i') && (palabrass.charAt(w) != 'o') && (palabrass.charAt(w) != 'u') ){
+				contador2++;
+			}
+		}
+		return contador2++;
+
+	}
+
+	public String cuentaPalabras (String mundo){
+		String cielo = "";
+		StringTokenizer contador3 = new StringTokenizer(mundo);
+		cielo += contador3.countTokens();
+		return cielo;		
+	}	
+}
+
+
+ import java.util.Scanner;
+
+public class TestCadenas {
+
+	public static void main (String[] args){
+                
+        Scanner tec = new Scanner(System.in);
+		ManejaCadenas manejaCadena1  = new ManejaCadenas();
+
+		String Skyrim;
+        String juegos;
+
+ 		System.out.print("Digite una palabra: ");
+		Skyrim = tec.nextLine();
+		juegos = manejaCadena1 .reverso (Skyrim);
+		System.out.println("La frase inversa es "+juegos);
+
+
+		
+	        System.out.print("Digite palabra: ");
+        	Skyrim = tec.nextLine();
+		juegos = manejaCadena1 .eliminaVocales(Skyrim);
+		System.out.println("palabra sin vocales es "+juegos);
+
+
+		int HollowKnight;
+		System.out.print("Digite palabra: ");
+        	Skyrim = tec.nextLine();
+		HollowKnight = manejaCadena1 .cuentaVocales(Skyrim);
+		System.out.println("la palabra tiene: "+HollowKnight+ " vocales");
+
+
+		
+		System.out.print("Digite palabra: ");
+        	Skyrim = tec.nextLine();
+		HollowKnight = manejaCadena1 .cuentaConsonantes(Skyrim);
+		System.out.println("La palabra tiene: "+HollowKnight + " consonante");
+
+
+		
+		System.out.print("Digite frase: ");
+        	Skyrim = tec.nextLine();
+		juegos = manejaCadena1 .cuentaPalabras (Skyrim);
+		System.out.println("la frase tiene "+juegos+ " palabras");		
+	}
+}
+
+
+
+a. Un método llamado reverso: que reciba un String y que retorne el String en reverso. Ej: ave devuelve eva
+
+b. Un método llamado eliminaVocales que reciba un String y que retorne otro String con la misma cadena pero sin vocales.
+
+c. Un método llamado cuentaVocales que reciba un String y retorne un entero con la cantidad de vocales que tiene el String pasado por parámetro.
+
+d. Un método llamado cuentaConsonantes que reciba un String y retorne un entero con la cantidad de consonantes que tiene el String pasado por parámetro.
+
+e. Un método llamado cuentaPalabras que reciba un String y retorne un entero con la cantidad de palabras.
+
+5. Realizar la clase Test con un método main van a crear cada instancia de cada una de las clases y van a probar cada uno de los métodos. 
+
+
+import java.util.Scanner;
+
+public class Test{
+
+      public static void main(String[]args ){
+      
+       Persona p = new Persona();
+
+          p.nombre = "Edgar";
+          p.apellido = "Montilla";
+          p.edad = 20;
+          p.sexo = "hombre";
+
+          p.dormir();
+           p.comer();
+            p.caminar();
+             p.correr();
+
+          System.out.println(p.nombre);
+            System.out.println(p.apellido);
+              System.out.println(p.edad);
+                System.out.println(p.sexo);
+
+       Calculadora c = new Calculadora();
+
+          int resul = c.sumar(534,9999);
+          int resul2 = c.restar(100,25);
+          int resul3 = c.multiplicar(50,30);
+          int resul4 = c.dividir(60,4);
+
+          System.out.println("El resultado de la suma es: "+ resul);
+            System.out.println("El resultado de la resta es: "+ resul2);
+             System.out.println("El resultado de la multiplicacion es: "+ resul3);
+               System.out.println("El resultado de la division es: "+ resul4);
+
+
+         Calculadora ca1 = new Calculadora();
+
+          int res = ca1.sumar(100,300);
+          int re1= ca1.sumar(150,250,350);
+          int re2= ca1.sumar(200,400,600);
+
+          int res2 = ca1.restar(10,25);
+          int re3 = ca1.restar(5,10,20);
+          int re4 = ca1.restar(3,6,9,12);
+           
+          int res3 = ca1.multiplicar(4,16);
+          int re5 = ca1.multiplicar(8,16,32);
+          int re6 = ca1.multiplicar(15,20,25,30);
+
+          int res4 = ca1.dividir(5652,423);
+          int re7 = ca1.dividir(24,56,60);
+          int re8 = ca1.dividir(20,44,72,100); 
+
+          System.out.println("El resultado de la suma es: "+res);
+            System.out.println("El resultado de la suma con tres digitos es: "+re1);
+               System.out.println("El resultado de la suma con cuatro digitos es: "+re2);
+
+            System.out.println("El resultado de la resta es: "+res2);
+               System.out.println("El resultado de la resta con tres digitos es: "+re3);
+                  System.out.println("El resultado de la resta con cuatro digitos es: "+re4);
+
+        
+              System.out.println("El resultado de la multiplicacion es: "+res3);
+                   System.out.println("El resultado de la suma con tres digitos es: "+re5);
+                      System.out.println("El resultado de la suma con tres digitos es: "+re6);
+
+                System.out.println("El resultado de la division es: "+res4);
+                  System.out.println("El resultado de la division con tres digitos es: "+re7);
+                     System.out.println("El resultado de la division con cuatro digitos es: "+re8);
+
+
+                
+		ManejaCadenas manejaCadena1 = new ManejaCadenas();
+    Scanner tec = new Scanner(System.in);
+
+		String Skyrim;
+    String juegos;
+
+ 		System.out.print("Digite una palabra: ");
+		Skyrim = tec.nextLine();
+		juegos = manejaCadena1 .reverso (Skyrim);
+		System.out.println("La frase inversa es "+juegos);
+
+		
+	        System.out.print("Digite palabra: ");
+        	Skyrim = tec.nextLine();      
+		juegos =manejaCadena1 .eliminaVocales(Skyrim);
+		System.out.println("palabra sin vocales es "+juegos);
+
+
+		int HollowKnight;
+		System.out.print("Digite palabra: ");
+        	Skyrim = tec.nextLine();
+		HollowKnight = manejaCadena1 .cuentaVocales(Skyrim);
+		System.out.println("la palabra tiene: "+HollowKnight+ " vocales");
+
+		
+		System.out.print("Digite palabra: ");
+        	Skyrim = tec.nextLine();
+		HollowKnight = manejaCadena1 .cuentaConsonantes(Skyrim);
+		System.out.println("La palabra tiene: "+HollowKnight + " consonante");
+
+		
+		System.out.print("Digite frase: ");
+        	Skyrim = tec.nextLine();
+		juegos =manejaCadena1 .cuentaPalabras (Skyrim);
+		System.out.println("la frase tiene "+ juegos + " palabras");
+   }
+      
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Realizar un programa que reciba un arreglo de enteros e imprima
+la suma de sus elementos.
+
+package Tarea1;
+ 
+import java.util.Scanner;
+ 
+public class tarea {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		float suma = 0;
+		int[] miArreglo = new int[12];
+		for (int i = 0; i < 12; i++) {
+			System.out.print("Ingrese el número en la posición " + (i) + " :");
+			miArreglo[i] = entrada.nextInt();
+		}
+		
+		for (int i = 0; i < miArreglo.length; i++) {
+			suma += miArreglo[i];			
+			
+			System.out.println(String.format(miArreglo[i]));
+		}
+
+                                }
+      }
+
+2. Realizar un programa que imprima un arreglo de enteros de forma
+invertida.
+package Tarea2;
+ 
+import java.util.Scanner;
+ 
+public class Clase2 {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		
+		int[] miArreglo = new int[12];
+		for (int i = 12; i > 0; i--) {
+			System.out.print("Ingrese el número en la posición " + (i) + " :");
+			miArreglo[i] = entrada.nextInt();
+		}
+		
+		
+
+                                }
+      }
+
+
+3. Realizar un programa que imprima una matriz de enteros de forma
+invertida.
+
+package Tarea3;
+ 
+public class Clase3 {
+	public static void main(String[] args) {
+		
+	int n = 4
+                      int A [] [] = {{1, 2 ,3 ,4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+                for(int i = n-1; i>-1;i--){
+                 for(int j = n-1; j>-1;j--)
+              System.out.print(A[i][j] + "/t");
+           System.out.print();
+}
+		
+
+                                }
+      }
+
+
+4. Realizar un programa que tome dos arreglos de enteros, los
+unifique e imprima los valores ordenados. (Investigar método de
+ordenación Bubble Sort).
+
+package Tarea4;
+ 
+public class Clase4 {
+	public static void main(String[] args) {
+
+String [] ar1={"a","e","i","o","u"};
+String [] ar2={"b","c","d","f","g"};
+String[] result = Stream.of(ar1, ar2).flatMap(Stream::of).toArray(String[]::new);
+String result2
+System.out.println(Arrays.toString(result));
+
+  System.out.println("");  
+                for(int i=0; i < result.length; i++){  
+                        System.out.print(reuslt[i] + " ");  
+                }  
+                System.out.println();  
+                  
+                bubbleSort(result);
+                 
+                System.out.println("");  
+                for(int i=0; i < result.length; i++){  
+                        System.out.print(result[i] + " ");  
+}
+
+}
+}
+
+5. Realizar un programa con un método que reciba un arreglo de
+enteros y lo llene con valores aleatorios. Un método que reciba un
+arreglo y ordene el arreglo de manera descendente y otro método
+que lo ordene de manera ascendente utilizando Quick Sort.
+(Investigar el método de ordenación Quick Sort).
+
+
+6. Realizar un programa que tenga un método que reciba dos
+matrices cuadradas y que retorne la matriz resultante de la suma
+de ambas.
+
+public class Tarea6 {
+
+
+        public static void main(String[] args){
+        int numero1[][]= {{1,5,6},{2,8,9},{3,4,7}};
+        int numero2[][]={{2,4,6},{3,5,6},{4,5,7}};
+        int res[][]=new int[3][3];
+        
+        for(int y = 0;y < numero1.length; y++){
+               for(int z = 0;z < numero1.length; z++)
+               System.out.print(numero1[y][z]+"\t");
+               System.out.println();
+                   
+        } 
+        System.out.println();
+        for(int x = 0;x < numero1.length; x++){
+               for(int i = 0;i < numero1.length; i++)
+               System.out.print(numero1[x][i]+"\t");
+               System.out.println();
+                   
+        }   
+        System.out.println();
+        for(int a = 0;a<numero1.length;a++){
+            for(int b = 0;b <numero2.length;b++){
+                res[a][b]= numero1[a][b]+numero2[a][b];
+            }
+        }
+        System.out.println();
+        for(int x = 0;x < res.length; x++){
+               for(int i = 0;i < res.length; i++)
+               System.out.print(res[x][i]+"\t");
+               System.out.println();
+                   
+        }   
+        
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Crear un tablero de Ajedrez utilizando GridLayout y deben hacerlo sin el Designer de Netbeans. (todo a codigo manual)
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class TableroAjedrezClass extends JPanel {
+public TableroAjedrezClass(int capacidad) {
+JButton[][] botones;
+botones = new JButton[capacidad][capacidad];
+
+
+OyenteAcciones oyenteAcciones = new OyenteAcciones(this);
+
+for (int i = 0; i < botones.length; i++) {
+for (int j = 0; j < botones[i].length; j++) {
+botones[i][j] = new JButton();
+botones[i][j].setPreferredSize(new Dimension(50, 50));
+if ((i + j + 1) % 2 == 0) {
+botones[i][j].setBackground(Color.BLACK);
+}
+botones[i][j].addActionListener(oyenteAcciones);
+add(botones[i][j]);
+}
+setLayout(new GridLayout(capacidad, capacidad));
+
+}
+
+}
+
+class OyenteAcciones implements ActionListener {
+private JPanel panel;
+
+public OyenteAcciones(JPanel panel) {
+this.panel = panel;
+}
+
+@Override
+public void actionPerformed(ActionEvent e) {
+
+JButton boton = (JButton) e.getSource();
+String color = “blanco”;
+if (boton.getBackground() == Color.BLACK) {
+color = “negro”;
+}
+
+}
+
+}
+
+public static void main(String[] args) {
+JFrame ventana = new JFrame("TableroDeAjedrez");
+TableroAjedrezClass tablero = new TableroAjedrezClass(8);
+ventana.add(tablero);
+ventana.pack();
+ventana.setVisible(true);
+}
+}
+
+2. Crear la interfaz grafica de una calculadora. (Solo la GUI no tienen que funcionar los botones)
+
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.BoxLayout;
+import javax.swing.WindowConstants;
+
+public class CalculadoraClass{
+
+    JFrame frame;
+    JPanel panelSuperior, panelInferior;
+    JButton bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt0, btRT, btCE, btCL, btMas, btMenos, btMultiplicacion, btDivision, btIgual, btMN, btPunto;
+    JTextField pantalla;
+
+    public CalculadoraClass(){
+        PanelSuperior();
+        PanelInferior();
+        Ventana();}
+
+    void PanelSuperior(){
+        panelSuperior = new JPanel ();
+        panelSuperior.setLayout(new FlowLayout());
+        pantalla = new JTextField(30);
+        pantalla.setSize(20,50);
+        panelSuperior.add(pantalla);}
+
+    void PanelInferior(){
+        panelInferior= new JPanel();
+        panelInferior.setLayout(new GridLayout(5,4,10,10));
+        bt1=new JButton("1");
+        bt2=new JButton("2");
+        bt3=new JButton("3");
+        bt4=new JButton("4");
+        bt5=new JButton("5");
+        bt6=new JButton("6");
+         bt7=new JButton("7");
+        bt8=new JButton("8");
+        bt9=new JButton("9");
+        bt0=new JButton("0");
+        btRT=new JButton("RTC");
+        btCE=new JButton("CE");
+        btCL=new JButton("CL");
+        btMas=new JButton("+");
+        btMenos=new JButton("-");
+        btMultiplicacion=new JButton("x");
+        btDivision=new JButton("/");
+        btIgual=new JButton("=");
+        btMN=new JButton("+/-");    
+        btPunto=new JButton(".");
+        panelInferior.add(btRT);
+        panelInferior.add(btCE);
+        panelInferior.add(btCL);
+        panelInferior.add(btMas);
+        panelInferior.add(bt7);
+        panelInferior.add(bt8);
+        panelInferior.add(bt9);
+        panelInferior.add(btMenos);
+        panelInferior.add(bt4);
+        panelInferior.add(bt5);
+        panelInferior.add(bt6);
+        panelInferior.add(btMultiplicacion);
+        panelInferior.add(bt1);
+        panelInferior.add(bt2);
+        panelInferior.add(bt3);
+        panelInferior.add(btDivision);
+        panelInferior.add(btPunto);
+        panelInferior.add(bt0);
+        panelInferior.add(btMN);
+        panelInferior.add(btIgual);}
+
+    void Ventana(){
+        frame =new JFrame("Calculadora ");
+        frame.setLayout(new BoxLayout(frame.getContentPane(),BoxLayout.Y_AXIS));
+        frame.add(panelSuperior);
+        frame.add(panelInferior);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);}
+
+    public static void main(String [] inforux){
+        new CalculadoraClass();
+}
+}
